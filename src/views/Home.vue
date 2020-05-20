@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <Post/>
+   <button>see more</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Post from '../components/post'
 
 export default {
-  name: 'Home',
+  name: 'App',
   components: {
-    HelloWorld
-  }
+    Post
+  },
+  data: () => ({
+  })
 }
 </script>
+<style scoped lang="css">
+button{
+  position: absolute;
+  bottom: 70px;
+  background-color: #e1295d;
+  padding: 10px;
+  border-radius: 0px 50px 50px 0px;
+  color: white
+}
+button:hover{
+  padding-left: 50px;
+  transition: .5s
+}
+</style>
